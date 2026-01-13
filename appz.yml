@@ -18,9 +18,12 @@ deploy:
   - 27017
 
 volumes:
-- claim: mongo-data
-  mount: /appz/data
-  name: mongo-data
+  - claim: mongo-data
+    mount: /appz/data
+    name: mongo-data
+    size: 20Gi
+    mode: ReadWriteOnce
+    class: microk8s-hostpath
 
 monitor:
   notify: appzops@cloudbourne.co      
