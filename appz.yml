@@ -12,7 +12,7 @@ build:
   image_name: alpha/log-collector-db
 
 deploy:
-  context: alpha/DEV
+  context: anandp0/DEV
   replicas: 1
   port:
   - 27017
